@@ -1,4 +1,4 @@
-# RemWaste - Skip Hire Selection Interface
+# REM Waste - Skip Hire Selection Interface
 
 A modern web application for selecting and managing skip hire services. Built with React, TypeScript, and Tailwind CSS.
 
