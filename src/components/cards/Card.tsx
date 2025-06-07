@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import type { Card as CardType } from "../../types/card";
-import PrimaryButton from "../common/Buttons/PrimaryButton";
 import { Tag } from "../common/Tag";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
@@ -114,9 +113,16 @@ export const Card = ({ card, onClick, isSelected = false }: CardProps) => {
             </Tag>
           )}
         </div>
-        <PrimaryButton isSelected={isSelected}>
+        <button
+          type="button"
+          className={`flex w-full cursor-pointer ${
+            isSelected
+              ? "bg-blue-500 hover:bg-blue-600 dark:bg-blue-500 dark:hover:bg-blue-600 dark:text-white"
+              : "bg-black hover:bg-white dark:bg-gray-200  dark:hover:bg-black"
+          }  text-white hover:text-black dark:text-black dark:hover:text-white hover:outline-1 hover:outline-black justify-center rounded-md px-3 py-2.5 text-sm font-semibold leading-6 shadow-sm transition-all`}
+        >
           {isSelected ? "Selected" : "Select This Skip"}
-        </PrimaryButton>
+        </button>
       </div>
     </div>
   );

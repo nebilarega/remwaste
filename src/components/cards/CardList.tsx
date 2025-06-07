@@ -18,6 +18,7 @@ export const CardList = ({
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCard, setSelectedCard] = useState<CardType | null>(null);
   const totalPages = Math.ceil(cards.length / itemsPerPage);
+  const IMAGE_BASE_URL = import.meta.env.VITE_IMAGE_BASE_URL;
 
   useEffect(() => {
     setCurrentPage(1);
@@ -73,9 +74,9 @@ export const CardList = ({
             <div className="flex flex-col md:flex-row gap-6 md:gap-8">
               <div className="md:w-1/3">
                 <img
-                  src={`https://yozbrydxdlcxghkphhtq.supabase.co/storage/v1/object/public/skips/skip-sizes/${selectedCard.size}-yarder-skip.jpg`}
+                  src={`${IMAGE_BASE_URL}/storage/v1/object/public/skips/skip-sizes/${selectedCard.size}-yarder-skip.jpg`}
                   alt={`${selectedCard.size} Yard Skip`}
-                  className="w-full h-48 md:h-72 object-cover rounded-lg dark:border-gray-700"
+                  className="w-full h-48 md:h-72 object-cover rounded-lg border-1 border-gray-200 dark:border-gray-700"
                 />
               </div>
               <div className="md:w-2/3 space-y-4">

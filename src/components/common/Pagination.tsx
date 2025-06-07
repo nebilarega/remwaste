@@ -107,7 +107,7 @@ export const Pagination = ({
         className={`w-8 h-8 flex items-center justify-center rounded transition-colors text-sm ${
           currentPage === 1
             ? "text-gray-300 dark:text-gray-500 cursor-not-allowed"
-            : "text-gray-600 hover:bg-gray-100 cursor-pointer dark:text-gray-300 dark:hover:bg-gray-700"
+            : "text-gray-600 hover:bg-gray-300 cursor-pointer dark:text-gray-300 dark:hover:bg-gray-700"
         }`}
         aria-label="Go to previous page"
       >
@@ -117,10 +117,10 @@ export const Pagination = ({
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className={`w-8 h-8 flex items-center justify-center rounded transition-colors text-sm ${
+        className={`w-8 h-8 flex items-center justify-center rounded transition-colors text-sm  ${
           currentPage === totalPages
             ? "text-gray-300 dark:text-gray-500 cursor-not-allowed"
-            : "text-gray-600 hover:bg-gray-100 cursor-pointer dark:text-gray-300 dark:hover:bg-gray-700"
+            : "text-gray-600 hover:bg-gray-300 cursor-pointer dark:text-gray-300 dark:hover:bg-gray-700"
         }`}
         aria-label="Go to next page"
       >
