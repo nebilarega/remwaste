@@ -12,6 +12,7 @@ interface CardProps {
 
 export const Card = ({ card, onClick, isSelected = false }: CardProps) => {
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const IMAGE_BASE_URL = import.meta.env.VITE_IMAGE_BASE_URL;
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -48,7 +49,7 @@ export const Card = ({ card, onClick, isSelected = false }: CardProps) => {
         }`}
       >
         <img
-          src={`https://yozbrydxdlcxghkphhtq.supabase.co/storage/v1/object/public/skips/skip-sizes/${card.size}-yarder-skip.jpg`}
+          src={`${IMAGE_BASE_URL}/storage/v1/object/public/skips/skip-sizes/${card.size}-yarder-skip.jpg`}
           alt={"Skip Size Image"}
           className={`transition-all duration-300 cursor-pointer ${
             isFullscreen
