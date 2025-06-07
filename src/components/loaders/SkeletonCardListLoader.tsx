@@ -1,26 +1,19 @@
 const SkeletonCard = () => (
-  <div className="min-h-[450px] bg-white rounded-lg shadow-md overflow-hidden animate-pulse">
-    {/* Image placeholder */}
-    <div className="w-full h-48 bg-gray-200"></div>
+  <div className="min-h-[450px] bg-white  dark:bg-lighter-dark-background rounded-lg shadow-md overflow-hidden animate-pulse">
+    <div className="w-full h-48 bg-gray-200  dark:bg-lighter-dark-background"></div>
 
-    {/* Content section */}
-    <div className="p-4 bg-white space-y-6">
-      {/* Headline */}
-      <div className="h-6 bg-gray-200 rounded w-3/4"></div>
+    <div className="p-4 bg-white  dark:bg-lighter-dark-background space-y-6">
+      <div className="h-6 bg-gray-200  dark:bg-lighter-dark-background rounded w-3/4"></div>
 
-      {/* Description */}
       <div className="space-y-2">
-        <div className="h-4 bg-gray-200 rounded w-full"></div>
-        <div className="h-4 bg-gray-200 rounded w-2/3"></div>
+        <div className="h-4 bg-gray-200  dark:bg-lighter-dark-background rounded w-full"></div>
+        <div className="h-4 bg-gray-200  dark:bg-lighter-dark-background rounded w-2/3"></div>
       </div>
+      <div className="w-full border-b-2 border-gray-200  dark:border-gray-800 "></div>
 
-      {/* Divider */}
-      <div className="w-full border-b-2 border-gray-200"></div>
-
-      {/* Tags */}
       <div className="flex space-x-2">
-        <div className="h-6 bg-gray-200 rounded-full w-16"></div>
-        <div className="h-6 bg-gray-200 rounded-full w-16"></div>
+        <div className="h-6 bg-gray-200  dark:bg-lighter-dark-background rounded-full w-16"></div>
+        <div className="h-6 bg-gray-200  dark:bg-lighter-dark-background rounded-full w-16"></div>
       </div>
     </div>
   </div>

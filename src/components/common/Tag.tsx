@@ -16,11 +16,15 @@ const sizeStyles = {
 };
 
 const variantStyles = {
-  primary: "border-blue-200 text-blue-800",
-  secondary: "border-gray-200 text-gray-800",
-  success: "border-green-200 text-green-800",
-  warning: "border-yellow-400 text-yellow-800",
-  error: "border-red-200 text-red-800",
+  primary:
+    "border-blue-200 text-blue-800 dark:border-blue-800 dark:text-blue-200",
+  secondary:
+    "border-gray-200 text-gray-800 dark:border-gray-800 dark:text-gray-200",
+  success:
+    "border-green-200 text-green-800 dark:border-green-800 dark:text-green-200",
+  warning:
+    "border-yellow-400 text-yellow-800 dark:border-yellow-800 dark:text-yellow-400",
+  error: "border-red-200 text-red-800 dark:border-red-800 dark:text-red-200",
 };
 
 export const Tag = ({

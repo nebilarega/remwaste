@@ -59,8 +59,8 @@ export const Pagination = ({
           onClick={() => onPageChange(i)}
           className={`w-8 h-8 flex items-center justify-center rounded transition-colors text-sm ${
             currentPage === i
-              ? "bg-blue-500 text-white hover:bg-blue-600"
-              : "text-gray-600 hover:bg-gray-100"
+              ? "bg-blue-500 text-white hover:bg-blue-600 dark:hover:bg-blue-700"
+              : "text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
           }`}
           aria-label={`Go to page ${i}`}
           aria-current={currentPage === i ? "page" : undefined}
@@ -75,7 +75,7 @@ export const Pagination = ({
         pages.push(
           <span
             key="end-ellipsis"
-            className="w-8 h-8 flex items-center justify-center text-gray-400 text-sm"
+            className="w-8 h-8 flex items-center justify-center text-gray-400 text-sm dark:text-gray-500"
           >
             ...
           </span>
@@ -85,7 +85,7 @@ export const Pagination = ({
         <button
           key="last"
           onClick={() => onPageChange(totalPages)}
-          className="w-8 h-8 flex items-center justify-center rounded hover:bg-gray-100 transition-colors text-gray-600 text-sm"
+          className="w-8 h-8 flex items-center justify-center rounded hover:bg-gray-100 transition-colors text-gray-600 text-sm dark:text-gray-300"
           aria-label="Go to last page"
         >
           {totalPages}
@@ -106,8 +106,8 @@ export const Pagination = ({
         disabled={currentPage === 1}
         className={`w-8 h-8 flex items-center justify-center rounded transition-colors text-sm ${
           currentPage === 1
-            ? "text-gray-300 cursor-not-allowed"
-            : "text-gray-600 hover:bg-gray-100 cursor-pointer"
+            ? "text-gray-300 dark:text-gray-500 cursor-not-allowed"
+            : "text-gray-600 hover:bg-gray-100 cursor-pointer dark:text-gray-300 dark:hover:bg-gray-700"
         }`}
         aria-label="Go to previous page"
       >
@@ -119,8 +119,8 @@ export const Pagination = ({
         disabled={currentPage === totalPages}
         className={`w-8 h-8 flex items-center justify-center rounded transition-colors text-sm ${
           currentPage === totalPages
-            ? "text-gray-300 cursor-not-allowed"
-            : "text-gray-600 hover:bg-gray-100 cursor-pointer"
+            ? "text-gray-300 dark:text-gray-500 cursor-not-allowed"
+            : "text-gray-600 hover:bg-gray-100 cursor-pointer dark:text-gray-300 dark:hover:bg-gray-700"
         }`}
         aria-label="Go to next page"
       >

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
   font-family: "Satoshi";
@@ -16,6 +17,8 @@
   --color-primary: #000;
   --color-secondary: #fff;
   --font-family: "Satoshi", system-ui, -apple-system, BlinkMacSystemFont;
+  --color-dark-background: #121212;
+  --color-lighter-dark-background: #1c1c1c;
 }
 
 :root {
@@ -40,4 +43,5 @@ body {
   display: flex;
   place-items: center;
   min-width: 100vw;
+  overflow-x: hidden;
 }

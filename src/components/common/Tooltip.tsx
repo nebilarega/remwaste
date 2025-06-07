@@ -102,7 +102,7 @@ export const Tooltip = ({
           className={`
             absolute z-[9999] px-3 py-2 text-sm text-white bg-gray-900 rounded
             max-w-[200px] break-words
-            pointer-events-none
+            pointer-events-none text-center
             ${positionClasses[tooltipPosition]}
             before:content-[''] before:absolute
             ${
