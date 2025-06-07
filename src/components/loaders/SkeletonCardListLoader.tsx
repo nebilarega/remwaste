@@ -24,7 +24,7 @@ export const SkeletonCardListLoader = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="h-8 bg-gray-200 rounded w-48 mb-8"></div>
+      <div className="h-8 bg-gray-200 dark:bg-lighter-dark-background rounded w-48 mb-8"></div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {skeletonCards.map((_, index) => (
           <SkeletonCard key={index} />

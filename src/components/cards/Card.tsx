@@ -78,7 +78,7 @@ export const Card = ({ card, onClick, isSelected = false }: CardProps) => {
             size="sm"
             variant="primary"
             className="w-fit"
-            tooltip={"Something"}
+            tooltip={"Price before VAT"}
           >
             {formatPrice(card.price_before_vat)}
           </Tag>

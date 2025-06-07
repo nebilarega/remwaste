@@ -60,7 +60,7 @@ export const Pagination = ({
           className={`w-8 h-8 flex items-center justify-center rounded transition-colors text-sm ${
             currentPage === i
               ? "bg-blue-500 text-white hover:bg-blue-600 dark:hover:bg-blue-700 cursor-pointer"
-              : "text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
+              : "text-gray-600 hover:bg-gray-300 dark:text-gray-300 dark:hover:bg-gray-700"
           }`}
           aria-label={`Go to page ${i}`}
           aria-current={currentPage === i ? "page" : undefined}

@@ -60,7 +60,7 @@ export const CardList = ({
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-10">
       <div
         className={`transition-all duration-300 ease-in-out transform ${
           selectedCard
@@ -69,7 +69,7 @@ export const CardList = ({
         }`}
       >
         {selectedCard && (
-          <div className="bg-gray-100 text-black dark:bg-lighter-dark-background dark:text-white rounded-lg border-2 border-gray-200 dark:border-gray-800 p-6 mb-6">
+          <div className="bg-white text-black dark:bg-lighter-dark-background dark:text-white rounded-lg border-2 border-gray-200 dark:border-gray-800 p-6 mb-6">
             <div className="flex flex-col md:flex-row gap-6 md:gap-8">
               <div className="md:w-1/3">
                 <img
@@ -147,7 +147,7 @@ export const CardList = ({
       </div>
       {totalPages > 1 && (
         <div className="mt-8 space-y-2">
-          <div className="text-sm text-gray-500 text-center mb-2">
+          <div className="text-sm text-gray-500 text-center mb-4">
             Showing {startIndex + 1}-{endIndex} of {cards.length} items
           </div>
           <div className="max-w-80 text-center mx-auto">
