@@ -19,6 +19,15 @@
   --font-family: "Satoshi", system-ui, -apple-system, BlinkMacSystemFont;
   --color-dark-background: #121212;
   --color-lighter-dark-background: #1c1c1c;
+
+  /* Custom sizes */
+  --size-card-height: 450px;
+  --size-theme-switcher-width: 60px;
+  --size-tooltip-max-width: 200px;
+
+  /* Z-index layers */
+  --z-tooltip: 9999;
+  --z-fullscreen: 99999;
 }
 
 :root {

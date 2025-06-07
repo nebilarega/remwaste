@@ -37,7 +37,7 @@ export const Layout = ({ children }: LayoutProps) => {
             <h1 className="text-lg font-bold text-gray-900 dark:text-white">
               RemWaste
             </h1>
-            <div className="bg-zinc-200 p-1 rounded-full flex gap-1 max-w-[60px]">
+            <div className="bg-zinc-200 p-1 rounded-full flex gap-1 max-w-[var(--size-theme-switcher-width)]">
               {!isDarkMode ? (
                 <button
                   onClick={() => toggleTheme(true)}
