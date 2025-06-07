@@ -71,7 +71,7 @@ export const Card = ({ card, onClick }: CardProps) => {
             </Tag>
           )}
         </div>
-        <PrimaryButton>Buy now</PrimaryButton>
+        <PrimaryButton>Select This Skip</PrimaryButton>
       </div>
     </div>
   );
