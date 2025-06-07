@@ -9,10 +9,10 @@ interface LayoutProps {
 export const Layout = ({ children }: LayoutProps) => {
   return (
     <ErrorBoundary>
-      <div className="w-full min-h-screen dark bg-gray-100 dark:bg-dark-background overflow-x-hidden">
+      <div className="w-full min-h-screen bg-gray-100 dark:bg-dark-background overflow-x-hidden dark">
         <header className="bg-white dark:bg-lighter-dark-background shadow">
           <div className="mx-auto py-2 px-4 sm:px-4 lg:px-6 flex">
-            <h1 className="text-lg font-bold text-gray-900 dark:text-white">
+            <h1 className="text-lg font-bold text-gray-900 dark:text-white my-auto">
               RemWaste
             </h1>
             <div className="bg-zinc-200 p-2 rounded-xl flex gap-1 max-w-[150px]">
@@ -26,7 +26,7 @@ export const Layout = ({ children }: LayoutProps) => {
           </div>
         </header>
         <main>
-          <div className="w-full mx-auto py-6 sm:px-6 lg:px-8">{children}</div>
+          <div className="w-full mx-auto sm:px-6 lg:px-8">{children}</div>
         </main>
         <footer className="bg-white dark:bg-lighter-dark-background shadow mt-8">
           <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">

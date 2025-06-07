@@ -19,12 +19,10 @@ export const CardList = ({
   const [selectedCard, setSelectedCard] = useState<CardType | null>(null);
   const totalPages = Math.ceil(cards.length / itemsPerPage);
 
-  // Reset to first page when cards array changes
   useEffect(() => {
     setCurrentPage(1);
   }, [cards]);
 
-  // Ensure current page is valid
   useEffect(() => {
     if (currentPage > totalPages) {
       setCurrentPage(totalPages || 1);
@@ -38,7 +36,6 @@ export const CardList = ({
   const handlePageChange = (page: number) => {
     if (page >= 1 && page <= totalPages) {
       setCurrentPage(page);
-      // Scroll to top of the list when changing pages
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
@@ -46,7 +43,6 @@ export const CardList = ({
   const handleCardClick = (card: CardType) => {
     setSelectedCard(selectedCard?.id === card.id ? null : card);
     onCardClick?.(card);
-    // Scroll to top smoothly when a card is selected
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -73,13 +69,13 @@ export const CardList = ({
         }`}
       >
         {selectedCard && (
-          <div className="bg-white dark:bg-lighter-dark-background rounded-lg shadow-md p-6 mb-6">
-            <div className="flex flex-col md:flex-row gap-6">
+          <div className="bg-gray-100 text-black dark:bg-lighter-dark-background dark:text-white rounded-lg border-2 border-gray-200 dark:border-gray-800 p-6 mb-6">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-8">
               <div className="md:w-1/3">
                 <img
                   src={`https://yozbrydxdlcxghkphhtq.supabase.co/storage/v1/object/public/skips/skip-sizes/${selectedCard.size}-yarder-skip.jpg`}
                   alt={`${selectedCard.size} Yard Skip`}
-                  className="w-full h-48 object-cover rounded-lg"
+                  className="w-full h-48 md:h-72 object-cover rounded-lg dark:border-gray-700"
                 />
               </div>
               <div className="md:w-2/3 space-y-4">
@@ -115,12 +111,25 @@ export const CardList = ({
                     </Tag>
                   </div>
                 </div>
-                <button
-                  onClick={() => setSelectedCard(null)}
-                  className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 cursor-pointer"
-                >
-                  Change Selection
-                </button>
+                <div className="flex gap-4 mt-4">
+                  <button
+                    onClick={() => setSelectedCard(null)}
+                    className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 cursor-pointer"
+                  >
+                    Change Selection
+                  </button>
+                  <div>
+                    <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors cursor-pointer">
+                      Continue
+                    </button>
+                  </div>
+                </div>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-4">
+                  Imagery and information shown throughout this website may not
+                  reflect the exact shape or size specification, colours may
+                  vary, options and/or accessories may be featured at additional
+                  cost.
+                </p>
               </div>
             </div>
           </div>

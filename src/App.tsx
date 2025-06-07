@@ -18,8 +18,10 @@ const SkipList = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      {/* <h1 className="text-3xl font-bold mb-8">Available Skips</h1> */}
+    <div className="container mx-auto px-4 py-6">
+      <h1 className="text-xl font-bold text-center text-black dark:text-white py-2">
+        Available Skips
+      </h1>
       <CardList cards={cards} onCardClick={handleCardClick} />
     </div>
   );

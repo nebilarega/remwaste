@@ -71,16 +71,14 @@ export const Card = ({ card, onClick, isSelected = false }: CardProps) => {
       </div>
       <div className="flex-1 p-4 bg-white dark:bg-lighter-dark-background space-y-6 text-black dark:text-white">
         <h2 className="font-semibold text-lg">{card.size + " Yard Skip"}</h2>
-        <p className="dark:text-gray-300">
-          {card.hire_period_days + " day hire period"}
-        </p>
+        <p>{card.hire_period_days + " day hire period"}</p>
         <div className="w-full border-b-2 border-gray-200 dark:border-gray-800"></div>
         <div className="grid grid-cols-3 w-fit gap-3">
           <Tag
             size="sm"
             variant="primary"
             className="w-fit"
-            tooltip={"Price before VAT"}
+            tooltip={"Something"}
           >
             {formatPrice(card.price_before_vat)}
           </Tag>
@@ -115,13 +113,7 @@ export const Card = ({ card, onClick, isSelected = false }: CardProps) => {
             </Tag>
           )}
         </div>
-        <PrimaryButton
-          className={
-            isSelected
-              ? "bg-blue-500 hover:bg-blue-600 dark:bg-blue-500 dark:hover:bg-blue-600"
-              : ""
-          }
-        >
+        <PrimaryButton isSelected={isSelected}>
           {isSelected ? "Selected" : "Select This Skip"}
         </PrimaryButton>
       </div>

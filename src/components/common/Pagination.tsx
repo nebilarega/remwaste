@@ -34,7 +34,7 @@ export const Pagination = ({
         <button
           key="first"
           onClick={() => onPageChange(1)}
-          className="w-8 h-8 flex items-center justify-center rounded hover:bg-gray-100 transition-colors text-gray-600 text-sm"
+          className="w-8 h-8 flex items-center justify-center rounded hover:bg-gray-100 transition-colors text-gray-600 text-sm cursor-pointer"
           aria-label="Go to first page"
         >
           1
@@ -59,7 +59,7 @@ export const Pagination = ({
           onClick={() => onPageChange(i)}
           className={`w-8 h-8 flex items-center justify-center rounded transition-colors text-sm ${
             currentPage === i
-              ? "bg-blue-500 text-white hover:bg-blue-600 dark:hover:bg-blue-700"
+              ? "bg-blue-500 text-white hover:bg-blue-600 dark:hover:bg-blue-700 cursor-pointer"
               : "text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
           }`}
           aria-label={`Go to page ${i}`}
@@ -85,7 +85,7 @@ export const Pagination = ({
         <button
           key="last"
           onClick={() => onPageChange(totalPages)}
-          className="w-8 h-8 flex items-center justify-center rounded hover:bg-gray-100 transition-colors text-gray-600 text-sm dark:text-gray-300"
+          className="w-8 h-8 flex items-center justify-center rounded hover:bg-gray-100 transition-colors text-gray-600 text-sm dark:text-gray-300 cursor-pointer"
           aria-label="Go to last page"
         >
           {totalPages}
