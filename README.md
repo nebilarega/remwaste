@@ -12,6 +12,7 @@ A modern web application for selecting and managing skip hire services. Built wi
 - Theme persistence using localStorage
 - Mobile-friendly interface with optimized touch interactions
 - Interactive image enlargement for detailed skip viewing
+- Informative tooltips on hover for additional details
 
 ## Prerequisites
 
@@ -181,6 +182,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
    - Tag system for metadata
    - Mobile-optimized touch interactions
    - Image enlargement for detailed skip viewing
+   - Hover tooltips for additional information
 
 2. **CardList Component**
 
